@@ -16,7 +16,7 @@ class TestKotlinRecyclerAdapter(
         parent: ViewGroup,
         viewType: Int
     ): TestKotlinRecyclerViewHolder {
-        val v = LayoutInflater.from(parent.context).inflate(R.layout.drawer, parent, false)
+        val v = parent.myInflator(R.layout.drawer)
         return TestKotlinRecyclerViewHolder(v, clickListener)
     }
 
